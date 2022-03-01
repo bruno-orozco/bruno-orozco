@@ -75,26 +75,26 @@ WSGI_APPLICATION = 'bruno.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-
-#import dj_database_url
-#from decouple import config
-#DATABASES =  {
-#    'default': dj_database_url.config(
-#        default=config('DATABASE_URL')
-#    )
-#}
+import dj_database_url
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'befkj426p0hdwhrjuz8s',
-        'USER': 'uukoels0rzn4xaq0brhl',   
-        'PASSWORD': 'AZR9jJyhE8WZzccnjA7A',
-        'HOST': 'befkj426p0hdwhrjuz8s-postgresql.services.clever-cloud.com',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgres://bruno_orozco:rdrNcf6JLal7qmLjBHyMqycS03947m1G@dpg-c8f5b3b97ej0qn1kdjo0/bruno_orozco',
+        conn_max_age=600
+    )
 }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'bruno',
+#        'USER': 'postgres',   
+#        'PASSWORD': 'yeesolutions',
+#        'HOST': 'localhost',
+#        'PORT': '5432',
+#    }
+#}
 
 
 # Password validation
