@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_content %} 
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+
+    <title>Bruno Orozco | Portafolio</title>
+
+
+
+    <link rel="stylesheet" href="{% static 'normalize.css' %}">
+    
+    <link rel="stylesheet" c href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pure-min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main-grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#fafafa">
+
+{% endblock %}
+
+
+
+
+
+{% block container %}
+
+<!---->
+<div id="particles-js" class="splash-container">
+    <div class="splash">
+      <h2 class="mn-container__text--title-one">Bruno Orozco Mejía</h2>
+      <p style="text-align: center;" class="mn-container__text--title-three">Economista y programador</p>
+      <a href="{% static 'CV Bruno Orozco Mejía.pdf' %}" class="mn-container__text--cv">Descarga mi CV</a>
+    </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="content">
+      <h2 class="content-head is-center">Sobre mí</h2>
+      <div class="cont">
+
+        <img class="me" src="{% static 'me.jpg' %}"></img>
+      </div>
+      <div class="pure-g">
+          <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            
+              <p>
+                Soy economista por profesión y profesor de programación. He realizado mis estudios en la UNAM. Me encanta el universo tecnológico. Me apasiona el desarrollo web, la ciencia de datos y la intelingencia artificial.
+              </p>
+              <p>
+                Mi lenguaje de programación favorito es Python. Me divierto mucho elaborando poryectos con Django, Flask, Pandas, Numpy, Matplotlib y Plotly. Utilizo paradigmas de POO y proframación funcional.    
+              </p>
+              <p>
+               No obstante, también te pudo ayudar a desarrollar proyectos en Excel y R studio. Además, sé implementar bases de datos SQL, y data viz con Power BI, Tableau, y Google Data Studio.
+              </p>
+              </div>
+          </div>
+
+  </div>
+
+    
+
+</div>
+
+<script type="text/javascript" src="{% static 'Js/particles.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'Js/app.js' %}"></script>
+
+{% endblock %}

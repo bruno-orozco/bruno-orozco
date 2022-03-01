@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_content %} 
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <title>Bruno Orozco | Portafolio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'pure-min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main-grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    <link rel="stylesheet" href="{% static 'normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+
+{% endblock %}
+
+
+
+{% block container %}
+<div id="portafolio" class="content">
+    <h2 class="content-head is-center">Conoce mis proyectos principales.</h2>
+
+    <div class="pure-g">
+        <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+
+
+            <h3 style="padding-bottom: 2.5rem;">Micro-sofware: creador de polizas</h3>
+            <div style="text-align: justify; line-height: 30px;">
+                <p style="text-indent: 25px; padding-bottom: 2rem;">Este micro-sofware, es un creador de pólizas contables. En la empresa se tenía el siguiente problema:
+                se invertían muchas horas de tiempo para realizar calculos básicos. Este programa identifica automáticamente si el monto monetario 
+                es un cargo o un abono. Además, toma en cuenta la sucursal y la fecha en la que se realizó la transacción.
+                </p>
+                <p style="text-indent: 25px; padding-bottom: 2rem;">Este script fue hecho 100% en Python. Utilicé la librería <i>pandas</i> para la manipulación de datos, y tkinter para
+                    obtener una interfaz gráfica amigable para cualquier usuario. Con esto, se consiguió que cualquier persona pueda utilizar el código
+                    sin la necesidad de tener grandes conocimientos computacionales. La cabecera prevé los posibles errores que podría cometer el usuario,
+                    advirtiendo cómo solucionarlo en caso de cometer cualquier tipo de equivocación.
+                </p>
+            </div>
+            
+            
+            <a href="https://github.com/bruno-orozco/creador-polizas">
+                <img style="width: 100%;" src="{% static 'sofware-pandas.png' %}">
+                </img>
+            </a>
+
+            <h3 style="padding-bottom: 2.5rem;">App web: Gestión de Relación con el Cliente</h3>
+            <div style="text-align: justify; line-height: 30px;">
+                <p style="text-indent: 25px; padding-bottom: 2rem;">Esta app, surgió de la ncesidad de recolectar los datos que los vendedores de la empresa generaban.
+                    Ya que los empleados pertenecían a diferentes regiones de la república, había un problema de supervisión de la actividad diaria. Este web-site resolvió muchos de estos problemas.
+                    Por un lado, el empleado podía ver el avance de sus métricas de productivadad en tiempo real. Con ello, se logró detectar las áreas de oportunidad en el proceso de prospección. 
+                </p>
+                <p style="text-indent: 25px; padding-bottom: 2rem;">Para la creación de esta app recurrí a HTML, CSS y Javascript para crear el frontend. Para el backend, utilicé el framework Django de Python.
+                    Las bases de datos están compiladas con PostreSQL. Además, implementé la automatización de reportes diarios vía email a los líderes de ventas. Aproveché las librerías psycopg2, pandas, y win32com para este propósito.
+                </p>
+            </div>
+
+            <a style="display: flex;" href="https://ledmex.herokuapp.com/ventas/">
+                <img style="margin: auto; padding-bottom: 2rem;" src="{% static 'app-yeesolutions.png' %}">
+                </img>
+            </a>
+
+            <h3 style="padding-bottom: 2.5rem;">Cursos de programación: Análisis económico con Python</h3>
+            <div style="text-align: justify; line-height: 30px;">
+                <p style="text-indent: 25px; padding-bottom: 2rem;">A medidados de este año, decidí impartir cursos de programación con enfoque económico. Al darme cuenta que no existía un curso de este género,
+                    decidí impartirlos. La diferenciación principal respecto a otros, consitió en la identificación de las herramientas necesarias para que un aspirante a economista profesional pueda
+                    aprovechar este lenguaje y encontrar un sentido práctico.
+                </p>
+            </div>
+
+            <div style="display: flex;">
+                <img style="margin: auto; width: 33.2rem; padding-bottom: 2rem;" src="{% static 'cursos-python.jpg' %}">
+                </img>
+            </div>
+            <div style="text-align: justify; line-height: 30px;">
+                <p style="text-indent: 25px; padding-bottom: 2rem;">En general, reseñaron positivamente mi trabajo. Estudiantes de economía tanto de nivel maestría como de los primeros semestres de economía 
+                    me agredecieron personalmente por este curso.
+                </p>
+            </div>
+
+
+            <iframe class="fb" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fjavier.rendongonzalez%2Fposts%2F5128585820492125&show_text=true&width=500" width="500" height="233" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+            <div style="text-align: justify; line-height: 30px;">
+                <p style="text-indent: 25px; padding-bottom: 2rem;">Además, compartí en YouTube clases públicas de estadística con Python para apliar esta difusión.
+                </p>
+            </div>
+
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mqjU-bQzqsQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}
